@@ -27,11 +27,14 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ * Counter 1 uses an outer function-scoped variable that will reset to 0 each time the outer function is called. Counter 2 is using a global scope variable that is reset once, and each time you call the function it will not reset.
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ * Counter 1 uses closure, as it's using a variable from an outer function's scope for the inner functions directions.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * The code from counter1 would be preferable if you were looking to be able to use another function to reset a function (closure) without affecting other functions that have the same variable name. Counter 2 would be preferable if you were looking to set a variable at a global scope that could be used in multiple functions.
+ *  
 */
 
 // counter1 code
@@ -56,11 +59,11 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning(score){
+  let score = Math.round(Math.random() + Math.random());
+  console.log(`${score} points.`);
 }
+inning();
 
 /* Task 3: finalScore()
 
@@ -76,10 +79,9 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
-
+function finalScore(callFunction, noOfInnings){
+  let home;
+  
 }
 
 /* Task 4: 
