@@ -54,7 +54,7 @@ function counter2() {
   return count++;
 }
 
-var getInningScore;
+
 /* Task 2: inning() 
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
@@ -114,12 +114,13 @@ and returns the score at each pont in the game, like so:
 8th inning: awayTeam - homeTeam
 9th inning: awayTeam - homeTeam
 Final Score: awayTeam - homeTeam */
-
+var getInningScore;
 
 function scoreboard(callFunction1, callFunction2, noOfInnings) {
   var finalScoreHome = 0;
   var finalScoreAway = 0;
   noOfInnings = 9;
+  callFunction1;
   function getInningScore(noOfInnings){
     for(let i = 1; i <= noOfInnings; i++){
       let inningScoreHome = callFunction2();
